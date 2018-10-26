@@ -15,6 +15,10 @@ El for loop dentro de la función add_array tiene el mismo problema que en add_a
 también incluir <stdlib.h> para poder usar abs dentro de add_array
 estaba haciendo dos punteros *a y *b que no apuntaban a nada, definí a "a" y "b" como dos arrays estáticos de tamaño 3.
 
+## FLOATING POINT EXCEPTION
+
+#comparsion.c
+-DTRAPFPE incluye <fpe_x87_sse.h> y agrega la función set_fpe_x87_sse()
 
 
 
