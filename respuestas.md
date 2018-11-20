@@ -7,7 +7,7 @@
 Faltaba include <stdlib.h> que contiene la función abs
 la cual se utiliza en la función `add_array`
 
-El for loop dentro de la función `add_array` tiene que ejecutarse mientras i "<" n, no mientras <= n + 1
+El for loop dentro de la función `add_array` tiene que ejecutarse mientras `i < n`, no mientras `i <= n + 1`
 
 ### add_array_dynamic
 
@@ -43,9 +43,9 @@ si quiero hacer la raiz cuadrada de un numero negativo por ejemplo el resultado 
 
 ## SEGMENTATION FAULT
 
-..* small no produce ningún error al compilar ni al correr
+* `small` no produce ningún error al compilar ni al correr
 
-..* big se compila sin problemas pero al momento de correrlo genera una "Segmentation fault"
+* `big` se compila sin problemas pero al momento de correrlo genera una "Segmentation fault"
 
 luego de ejecutar `ulimit -s unlimited`  big deja de generar la segmentation fault (pero tuve que cancelarlo porque me estaba explotando la máquina virtual, jaja).
 
@@ -54,13 +54,13 @@ con unlimit -s le saco el límite al stack size, es decir permito que se utilice
 para solucionar esto podría cambiar los tipos de A y C, en lugar de floats que fueran doubles o long doubles.
 
 ## VALGRIND
-..* En el caso de test_oob4 tiene 2 errores con leak de memoria.
-..* No pude trabajar con source1.c por un problema de mi maquina virtual.
+* En el caso de test_oob4 tiene 2 errores con leak de memoria.
+* No pude trabajar con source1.c por un problema de mi maquina virtual.
 
 ## FUNNY
-..* Cuando se compila sin el flag se genera una segmentation fault
+* Cuando se compila sin el flag se genera una segmentation fault
 
-..* Cuando se compila con el flag DEBUG se imprime un mensaje ('I'm HERE !!!!) pero igualmente se produce una segmentation fault.
+* Cuando se compila con el flag DEBUG se imprime un mensaje ('I'm HERE !!!!) pero igualmente se produce una segmentation fault.
 
 las diferencias estan dadas por que el mensaje de error (i'm here) solo se genera e imprime si se compila con el tag DEBUG
 
